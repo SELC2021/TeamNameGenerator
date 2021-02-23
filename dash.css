@@ -1,0 +1,32 @@
+.flex-container {
+	display: flex;
+}
+
+.block1 {
+	background-color: red;
+	position: fixed;
+	/* left: 25%*/;
+	top: 25%;
+	left: 25%;
+}
+
+.block2 {
+	background-color: blue;
+	position: fixed;
+	right: 25%;
+	top: 25%;
+}
+
+.block3 {
+	background-color: green;
+	position: fixed;
+	left: 25%;
+	bottom: 25%;
+}
+
+.block4 {
+	background-color: orange;
+	position: fixed;
+	right: 25%;
+	bottom: 25%;
+}
