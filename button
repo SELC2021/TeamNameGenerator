@@ -1,0 +1,4 @@
+.button{
+	position: fixed;
+	left: 50%
+}
