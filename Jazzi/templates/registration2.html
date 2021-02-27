@@ -13,10 +13,19 @@
             <h2 class="word"> 
                 <form action="{{ url_for('register') }}" method="post"> 
                   <div class="msg">{{ msg }}</div> 
-                    <input id="username" name="username" type="text" placeholder="Enter Your Username" class="textbox"/></br></br> 
-                    <input id="password" name="password" type="password" placeholder="Enter Your Password" class="textbox"/></br></br> 
-                    <input id="email" name="email" type="text" placeholder="Enter Your Email ID" class="textbox"/></br></br> 
-                    <input type="submit" class="btn" value="Sign Up"></br> 
+                    <input id="firstname" name="firstname" type="text" placeholder="First Name" class="textbox"/></br></br> 
+                    <input id="lastname" name="lastname" type="text" placeholder="Last Name" class="textbox"/></br></br>
+                    <input id="email" name="email" type="email" placeholder="Email" class="textbox"/></br></br>  
+                    <input id="username" name="username" type="text" placeholder="Username" class="textbox"/></br></br> 
+                    <input id="password" name="password" type="password" placeholder="Password" class="textbox"/></br></br> 
+                    <input id="confirm_password" name="confirm_password" type="password" placeholder="Confirm Password" class="textbox"/></br></br> 
+                    <h4> Payment Information: </h4>
+                    <h4>Jazzi will charge $x/month to this card.</h4>
+                    <input id="ccnumber" name="ccnumber" type="text" placeholder="Credit Card Number" class="textbox"/></br></br>  
+                    <input id="expdate" name="expdate" type="text" placeholder="Expiration Date" class="textbox"/></br></br> 
+                    <input id="cvv" name="cvv" type="text" placeholder="CVV" class="textbox"/></br></br> 
+                    <input id="zipcode" name="zipcode" type="text" placeholder="Zip Code" class="textbox"/></br></br> 
+                    <input type="submit" class="btn" value="Sign Up"></br>
                 </form> 
             </h2> 
             <p class="bottom">Already have an account?  <a class="bottom" href="{{url_for('login')}}"> Sign In here</a></p> 

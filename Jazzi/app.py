@@ -4,21 +4,27 @@ userDatabse = mysql.connector.connect(
     host='localhost',
     database='TeamNameGenerator',
     user='root',
-    password='Chimaobim3'
+    password='NewPassword'
 )
 app = Flask(__name__)
 
-@app.route('/login')
+@app.route('/login') 
 def login():
     return render_template('login.html')
 
 @app.route('/register', methods =['GET', 'POST'])
 def register():
-    if request.method == 'POST' and 'username' in request.form and 'password' in request.form and 'email' in request.form:
+    if request.method == 'POST':
+    	firstname = request.form['firstname']
+    	lastname = request.form['lastname']
+    	email = request.form['email']
     	username = request.form['username']
     	password = request.form['password']
-    	email = request.form['email']
-    	
+    	ccnumber = request.form['ccnumber']
+    	expdate = request.form['expdate']
+    	cvv = request.form['cvv']
+    	zipcode = request.form['zipcode']
+
     	myCursor = userDatabse.cursor()
 
     	getNumberOfUsers = "SELECT * FROM NumberOfUsers"
@@ -27,8 +33,8 @@ def register():
     	accountid = numUsers[0][0]
 
     	#myCursor = userDatabse.cursor()
-    	insertUserDetails = "INSERT INTO Users (AccountID, Username, Password, Email) VALUES (%s, %s, %s, %s)"
-    	accountDetails = (accountid + 1, username, password, email)
+    	insertUserDetails = "INSERT INTO Users (AccountID, FirstName, LastName, Email, Username, Password, CreditCardNumber, CreditCardExpDate, CreditCardCvv, ZipCode) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+    	accountDetails = (accountid + 1, firstname, lastname, email, username, password, ccnumber, expdate, cvv, zipcode)
     	myCursor.execute(insertUserDetails, accountDetails)
     	
     	#myCursor3 = userDatabse.cursor()
@@ -38,7 +44,7 @@ def register():
 
 
     	userDatabse.commit()
-    return render_template('register.html')
+    return render_template('registration2.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
