@@ -8,9 +8,24 @@ userDatabse = mysql.connector.connect(
 )
 app = Flask(__name__)
 
-@app.route('/login') 
+@app.route('/login', methods =['GET', 'POST']) 
 def login():
-    return render_template('login.html')
+    if request.method == 'POST':
+        username = request.form['login_username']
+        password = request.form['login_password']
+        loginCursor = userDatabse.cursor()
+        checkAccount = f"SELECT Username, Password FROM Users WHERE Username = '{username}'"
+        loginCursor.execute(checkAccount)
+        accountInfo = loginCursor.fetchall()
+        try: 
+            if username in accountInfo[0]:
+                if password in accountInfo[0]:
+                    print("Logged in successfully!")
+                else:
+                    print("Wrong password!")
+        except:
+            print("Account not found!")
+    return render_template('login.html')  
 
 @app.route('/register', methods =['GET', 'POST'])
 def register():
