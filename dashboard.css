@@ -1,12 +1,64 @@
 body {
 	font-family: 'Trebuchet MS', sans-serif;
+	margin: 0px;
+	color: white;
+}
+
+#navBar {
+	width: 500px;
 }
 
 #name {
-	position: fixed;
 	font-size: 50px;
-	left: 50px;
-	top: -30px;
 	font-family: 'Brush Script MT', cursive;
-	color: purple ;
+	color: white;
+}
+
+.navTitle {
+	color: white;
+}
+
+#largeImage {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./assets/temp.jpg);
+}
+
+#discription {
+	position: absolute;
+	width: 40%;
+	top: 30%;
+	left: 100px;
+}
+
+#title {
+	font-size: 80px;
+	color: white;
+}
+
+#sideBar {
+	position: absolute;
+	width: 30%;
+	top: 100px;
+	height: 80%;
+	right: 100px;
+	background: rgba(0, 0, 0, 0.6);
+}
+
+.otherOptions {
+	background: white;
+	margin-left: 5%;
+	width: 90%;
+	height: 200px;
+	border-radius: 20px;
+}
+
+h1, h4{
+	color: black;
+	margin-left: 20px;
+	margin-right: 20px;
 }
