@@ -1,0 +1,12 @@
+body {
+	font-family: 'Trebuchet MS', sans-serif;
+}
+
+#name {
+	position: fixed;
+	font-size: 50px;
+	left: 50px;
+	top: -30px;
+	font-family: 'Brush Script MT', cursive;
+	color: purple ;
+}
