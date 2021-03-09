@@ -1,0 +1,14 @@
+#myText {
+	font-size: 26px;
+}
+
+.myClass {
+	color: green;
+}
+
+.VideoBLock{
+	position: relative;
+	background: purple;
+	border-radius: 25px;
+	width: 200px;
+}
