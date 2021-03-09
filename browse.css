@@ -1,0 +1,63 @@
+body {
+	margin: 0px; 
+	height: 1040px; 
+	overflow: hidden;
+	background: rgb(0,0,0);
+	background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(134,0,255,1) 100%);
+	font-family: 'Trebuchet MS', sans-serif;
+}
+
+
+#title {
+	position: absolute;
+	margin: 0px;
+	left: 50px;
+	top: 40px;
+	font-size: 70px;
+	font-family: 'Brush Script MT', cursive;
+	color: white;
+}
+
+#accountInfo {
+	text-align: right;
+	position: absolute;
+	margin: 0px;
+	right: 150px;
+	top: 60px;
+}
+
+#name {
+	font-size: 24px;
+	color: white;
+}
+
+#credits {
+	position: relative;
+	font-size: 13px;
+	color: white;
+	top: 5px;
+}
+
+#profilePic {
+	position: absolute;
+	margin: 0px;
+	right: 50px;
+	top: 50px;
+	width: 80px;
+	height: 80px;
+}
+
+#carouselBody {
+	position: absolute;
+	height: 70%;
+	top: 200px;
+	background: white;
+}
+
+.project {
+	width: 400px;
+	height: 100%;
+	background: black;
+	margin-left: 40px;
+	border-radius: 30px;
+}
