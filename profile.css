@@ -1,0 +1,26 @@
+
+
+.ProfilePic {
+  position: fixed;
+  right: 30px;
+  top: 20px;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  display: inline-block;
+  background-image: url(defaultProfilePicture2.png);
+  background-size: cover;
+}
+
+.project {
+	position: fixed;
+	top: 300px;
+	height: 450px;
+	width: 300px;
+}
+
+#projectHeader{
+	position: fixed;
+	top: 230px;
+}
+
