@@ -57,7 +57,6 @@ body {
   display: flex;
   height: 400px;
   width: 300px;
-  background-color: #17141d;
   border-radius: 10px;
   box-shadow: -1rem 0 3rem #000;
 /*   margin-left: -50px; */
@@ -82,7 +81,7 @@ body {
 }
 
 .title {
-  color: white;
+  color: black;
   font-weight: 300;
   position: absolute;
   left: 20px;
