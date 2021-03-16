@@ -7,6 +7,13 @@ userDatabse = mysql.connector.connect(
     password='NewPassword'
 )
 app = Flask(__name__)
+@app.route('/') 
+def dashboard():
+    return render_template('dashboard.html')  
+
+@app.route('/browse') 
+def browse():
+    return render_template('browse.html')  
 
 @app.route('/login', methods =['GET', 'POST']) 
 def login():
