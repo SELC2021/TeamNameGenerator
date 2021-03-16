@@ -1,9 +1,7 @@
 body {
 	margin: 0px; 
 	height: 1040px; 
-	overflow: hidden;
-	background: rgb(0,0,0);
-	background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(134,0,255,1) 100%);
+	background: rgb(255,255,255);
 	font-family: 'Trebuchet MS', sans-serif;
 }
 
@@ -14,8 +12,7 @@ body {
 	left: 50px;
 	top: 40px;
 	font-size: 70px;
-	font-family: 'Brush Script MT', cursive;
-	color: white;
+	color: black;
 }
 
 #accountInfo {
@@ -28,13 +25,13 @@ body {
 
 #name {
 	font-size: 24px;
-	color: white;
+	color: black;
 }
 
 #credits {
 	position: relative;
 	font-size: 13px;
-	color: white;
+	color: black;
 	top: 5px;
 }
 
@@ -47,17 +44,47 @@ body {
 	height: 80px;
 }
 
-#carouselBody {
-	position: absolute;
-	height: 70%;
-	top: 200px;
-	background: white;
+.container {
+  position: absolute;
+  height: 400px;
+  width: 80%;
+  display: flex;
+  left: 10%;
+  top: 200px;
 }
 
-.project {
-	width: 400px;
-	height: 100%;
-	background: black;
-	margin-left: 40px;
-	border-radius: 30px;
+.card {
+  display: flex;
+  height: 400px;
+  width: 300px;
+  background-color: #17141d;
+  border-radius: 10px;
+  box-shadow: -1rem 0 3rem #000;
+/*   margin-left: -50px; */
+  transition: 0.4s ease-out;
+  position: relative;
+  left: 0px;
+}
+
+.card:not(:first-child) {
+    margin-left: -20px;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
+
+.card:hover ~ .card {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+
+.title {
+  color: white;
+  font-weight: 300;
+  position: absolute;
+  left: 20px;
+  top: 15px;
 }
