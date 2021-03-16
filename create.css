@@ -16,6 +16,10 @@ h1 {
 	position: absolute;
 	margin-top: 150px;
 }
+.textboxes {
+	border-radius: 5px;
+	border-color: grey;
+}
 .description {
 	position: fixed;
 	margin-top: 200px;
@@ -27,4 +31,11 @@ h1 {
 .cont {
 	position: absolute;
 	margin-top: 400px;
+}
+
+.button {
+	position: absolute;
+	margin-top: 450px;
+	background-color: blue;
+	color: white;
 }

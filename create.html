@@ -12,26 +12,25 @@
   		<input type="file" id="myFile" name="filename">
   		<input type="submit">
   		</div>
-	</form>
-	<form action="/action_page.php">
+
 		<div class="title">
   		<label class="titletext" for="fname">Video Title: </label>
-  		<input class="titlebox" type="text" id="fname" name="fname">
+  		<input class="textboxes" type="text" id="fname" name="fname">
   	    </div>
-	</form>
-	<form action="/action_page.php">
+
 		<div class="description">
   		<label class="descriptiontext" for="fname">Video Description: </label>
   		<br>
-  		<textarea id="videodesc" name="videodesc" rows="10" cols="50">
+  		<textarea class="textboxes" id="videodesc" name="videodesc" rows="10" cols="50">
 		</textarea>
   	    </div>
-	</form>
-	<form action="/action_page.php">
+
 		<div class="cont">
   		<label class="conttext" for="fname">Contribution goal: </label>
   		<input class="contbox" type="number" id="fname" name="fname" oninput="check(this)"><br><br>
   	    </div>
+
+  	    <input class="button" type="submit" id="subm" name="subm">
 	</form>
 	<script>
 		function check(input) {
