@@ -13,14 +13,38 @@
 }
 
 .project {
-	position: fixed;
-	top: 300px;
+	position: relative;
+	top: 15px;
 	height: 450px;
 	width: 300px;
 }
 
 #projectHeader{
-	position: fixed;
+	position: relative
 	top: 230px;
 }
+
+#contributionHeader{
+  position: relative;
+  top: 10px;
+}
+
+.contributions {
+  position: relative;
+  top: 200px;
+  height: 450px;
+  width: 300px;
+
+}
+
+#contribution1{
+  height: 470px;
+  width: 310px;
+}
+
+#contribution2{
+  height: 470px;
+  width: 310px;
+}
+
 
