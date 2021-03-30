@@ -1,0 +1,91 @@
+body {
+	margin: 0px; 
+	height: 1040px; 
+	background: rgb(255,255,255);
+	font-family: 'Trebuchet MS', sans-serif;
+}
+
+
+#title {
+	position: absolute;
+	margin: 0px;
+	left: 50px;
+	top: 40px;
+	font-size: 70px;
+	color: black;
+}
+
+#accountInfo {
+	text-align: right;
+	position: absolute;
+	margin: 0px;
+	right: 150px;
+	top: 60px;
+}
+
+#name {
+	font-size: 24px;
+	color: black;
+}
+
+#credits {
+	position: relative;
+	font-size: 13px;
+	color: black;
+	top: 5px;
+}
+
+#profilePic {
+	position: absolute;
+	margin: 0px;
+	right: 50px;
+	top: 50px;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+}
+
+.container {
+  position: absolute;
+  height: 400px;
+  width: 80%;
+  display: flex;
+  left: 10%;
+  top: 200px;
+
+}
+
+.card {
+  display: flex;
+  height: 400px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: -1rem 0 3rem #000;
+/*   margin-left: -50px; */
+  transition: 0.4s ease-out;
+  position: relative;
+  left: 0px;
+}
+
+.card:not(:first-child) {
+    margin-left: -20px;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
+
+.card:hover ~ .card {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+
+.title {
+  color: black;
+  font-weight: 300;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
