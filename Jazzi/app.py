@@ -15,23 +15,26 @@ def dashboard():
 
 @app.route('/browse') 
 def browse():
-    accountID = loggedInAccountId
+    try:
+        accountID = loggedInAccountId
 
-    userInfoCursor = userDatabse.cursor()
-    getFirstName = f"SELECT FirstName FROM Users WHERE AccountID = '{accountID}'"
-    userInfoCursor.execute(getFirstName)
-    FirstName = userInfoCursor.fetchall()
-    
-    getLastName = f"SELECT LastName FROM Users WHERE AccountID = '{accountID}'"
-    userInfoCursor.execute(getLastName)
-    LastName = userInfoCursor.fetchall()
+        userInfoCursor = userDatabse.cursor()
+        getFirstName = f"SELECT FirstName FROM Users WHERE AccountID = '{accountID}'"
+        userInfoCursor.execute(getFirstName)
+        FirstName = userInfoCursor.fetchall()
+        
+        getLastName = f"SELECT LastName FROM Users WHERE AccountID = '{accountID}'"
+        userInfoCursor.execute(getLastName)
+        LastName = userInfoCursor.fetchall()
 
-    getNumCredits = f"SELECT Credits FROM Users WHERE AccountID = '{accountID}'"
-    userInfoCursor.execute(getNumCredits)
-    Credits = userInfoCursor.fetchall()
-    print(Credits)
-    userInfoCursor.close()
-    return render_template('browse.html', firstName = FirstName[0][0], lastName = LastName[0][0], numCredits = Credits[0][0])
+        getNumCredits = f"SELECT Credits FROM Users WHERE AccountID = '{accountID}'"
+        userInfoCursor.execute(getNumCredits)
+        Credits = userInfoCursor.fetchall()
+        print(Credits)
+        userInfoCursor.close()
+        return render_template('browse.html', firstName = FirstName[0][0], lastName = LastName[0][0], numCredits = Credits[0][0])
+    except:
+        return redirect('/login')
 
 @app.route('/login', methods =['GET', 'POST'])
 def login():
@@ -45,9 +48,10 @@ def login():
         try: 
             if username in accountInfo[0]:
                 if password in accountInfo[0]:
-                    print("Logged in successfully!")
+                    print("Logged in successfully!") 
                     global loggedInAccountId
                     loggedInAccountId = accountInfo[0][0]
+                    return redirect('/browse')
                 else:
                     print("Wrong password!")
         except:
@@ -84,8 +88,6 @@ def register():
     	updateNumberOfUsers = "UPDATE NumberOfUsers set number = number + 1"
     	myCursor.execute(updateNumberOfUsers)
     	myCursor.close()
-
-
     	userDatabse.commit()
     return render_template('registration2.html')
 
