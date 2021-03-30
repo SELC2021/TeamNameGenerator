@@ -3,7 +3,7 @@ body {
   margin: 0px; 
   height: 1040px; 
   background: rgb(255,255,255);
-  font-family: 'Trebuchet MS', sans-serif;
+  font-family: 'Happy Monkey', sans-serif;
 }
 
 #accountInfo{
@@ -28,9 +28,18 @@ body {
   color: black;
 }
 
+#userName {
+  position: absolute;
+  font-size: 20px;
+  color: black;
+  top: 56px;
+  left: -100px;
+  white-space: nowrap;
+}
+
 #myProjects{
   position: absolute;
-  top: 125px;
+  top: 140px;
   left: 50px;
 }
 
@@ -84,35 +93,6 @@ body {
   left: 20px;
   top: 15px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 #profilePic {
