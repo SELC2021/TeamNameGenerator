@@ -1,5 +1,7 @@
 from flask import Flask, render_template, url_for, request, redirect
 import mysql.connector
+
+
 userDatabse = mysql.connector.connect(
     host='localhost',
     database='TeamNameGenerator',
@@ -13,26 +15,45 @@ def dashboard():
 
 @app.route('/browse') 
 def browse():
-    return render_template('browse.html')  
+    accountID = loggedInAccountId
 
-@app.route('/login', methods =['GET', 'POST']) 
+    userInfoCursor = userDatabse.cursor()
+    getFirstName = f"SELECT FirstName FROM Users WHERE AccountID = '{accountID}'"
+    userInfoCursor.execute(getFirstName)
+    FirstName = userInfoCursor.fetchall()
+    
+    getLastName = f"SELECT LastName FROM Users WHERE AccountID = '{accountID}'"
+    userInfoCursor.execute(getLastName)
+    LastName = userInfoCursor.fetchall()
+
+    getNumCredits = f"SELECT Credits FROM Users WHERE AccountID = '{accountID}'"
+    userInfoCursor.execute(getNumCredits)
+    Credits = userInfoCursor.fetchall()
+    print(Credits)
+    userInfoCursor.close()
+    return render_template('browse.html', firstName = FirstName[0][0], lastName = LastName[0][0], numCredits = Credits[0][0])
+
+@app.route('/login', methods =['GET', 'POST'])
 def login():
     if request.method == 'POST':
         username = request.form['login_username']
         password = request.form['login_password']
         loginCursor = userDatabse.cursor()
-        checkAccount = f"SELECT Username, Password FROM Users WHERE Username = '{username}'"
+        checkAccount = f"SELECT AccountID, Username, Password FROM Users WHERE Username = '{username}'"
         loginCursor.execute(checkAccount)
         accountInfo = loginCursor.fetchall()
         try: 
             if username in accountInfo[0]:
                 if password in accountInfo[0]:
                     print("Logged in successfully!")
+                    global loggedInAccountId
+                    loggedInAccountId = accountInfo[0][0]
                 else:
                     print("Wrong password!")
         except:
             print("Account not found!")
     return render_template('login.html')  
+
 
 @app.route('/register', methods =['GET', 'POST'])
 def register():
