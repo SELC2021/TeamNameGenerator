@@ -1,6 +1,8 @@
 .heading {
 	/* padding-left: 50%; */
 	font-size: 35px;
+	position: fixed;
+	margin-left: 48%;
 }
 .button {
 	position: fixed;

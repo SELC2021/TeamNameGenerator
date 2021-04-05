@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Shop </title>
+	<link rel="stylesheet" href="shop.css">
+	<script>
+		function check1(input) {
+   			if (input.value <= 0) {
+     			input.setCustomValidity('The amount must be greater than 0');
+   			} else {
+     			input.setCustomValidity('');
+   			}
+ 		}
+ 		var token = 25
+    /*getElementsbyID("tokens").value * .25*/ 
+
+
+	</script>
+</head>
+<body>
+	<form action="action">
+	<h1>Token Shop</h1>
+  <div class="formboxes">
+	<div class="ccnumbox">
+  		<label class="ccnum" for="fname">Credit Card Number: </label>
+  		<input class="textbox" type="number" id="fname" name="fname">
+  	</div>
+  	<div class="exmonthbox">
+  		<label class="exmonth" for="fname">Expiration Month: </label>
+  		<input class="textbox" type="number" id="fname" name="fname">
+  	</div>
+  	<div class="exyearbox">
+  		<label class="exyear" for="fname">Expiration Year: </label>
+  		<input class="yeartextbox" type="number" id="fname" name="fname">
+  	</div>
+  	<div class="cvcbox">
+  		<label class="cvc" for="fname">CVC: </label>
+  		<input class="cvctextbox" type="number" id="fname" name="fname">
+  	</div>
+  	<div class="zipbox">
+  		<label class="zip" for="fname">Zipcode: </label>
+  		<input class="ziptextbox" type="number" id="fname" name="fname">
+  	</div>
+  	<div class="tokenbox">
+  		<label class="zip" for="fname">Enter how many tokes you would like to buy. Tokens are 25 cents a piece.
+  		</label>
+  		<input class="textbox" type="number" id="tokens" name="tokens" oninput="check1(this)"><br><br>
+      <p> This will cost <script>document.write(token)</script> dollars </p>
+      <input class="button" type="submit" id="subm" name="subm">
+
+  	</div>
+  </div>
+  	
+  	
+  </form>
+  	
+
+
+
+</body>
+</html>
