@@ -1,20 +1,21 @@
 body {
-	background-image: url(kazookid.png);
-	background-repeat: no-repeat;
-	background-size: cover;
 	font-family: Garamond, serif;
-	margin-left: 450px;
+	margin-left: 450px;	
+	background-color: #19647E;
 }
 h1 {
 	position: absolute;
+	color: #FDF7FA;
 }
 .choosefile {
 	position: absolute;
 	margin-top: 100px;
+	color: #FDF7FA;
 }
 .title {
 	position: absolute;
 	margin-top: 150px;
+	color: #FDF7FA;
 }
 .textboxes {
 	border-radius: 5px;
@@ -23,19 +24,22 @@ h1 {
 .description {
 	position: fixed;
 	margin-top: 200px;
+	color: #FDF7FA;
 }
 .videodesc {
 	vertical-align: top;
+	color: #FDF7FA;
 }
 
 .cont {
 	position: absolute;
 	margin-top: 400px;
+	color: #FDF7FA;
 }
 
 .button {
 	position: absolute;
 	margin-top: 450px;
-	background-color: blue;
-	color: white;
+	background-color: #E76F51;;
+	color: #19647E;
 }
