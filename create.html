@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Create</title>
+	<link rel="stylesheet" href="create.css">
+</head>
+
+<body>
+	<h1>Put the link to your youtube video here:</h1>
+	<form action="/action_page.php">
+		<div class="choosefile">
+  		<input type="text" id="link" name="link">
+  		<input type="submit">
+  		</div>
+
+		<div class="title">
+  		<label class="titletext" for="fname">Video Title: </label>
+  		<input class="textboxes" type="text" id="fname" name="fname">
+  	    </div>
+
+		<div class="description">
+  		<label class="descriptiontext" for="fname">Video Description: </label>
+  		<br>
+  		<textarea class="textboxes" id="videodesc" name="videodesc" rows="10" cols="50">
+		</textarea>
+  	    </div>
+
+		<div class="cont">
+  		<label class="conttext" for="fname">Contribution goal: </label>
+  		<input class="contbox" type="number" id="fname" name="fname" oninput="check(this)"><br><br>
+  	    </div>
+
+  	    <input class="button" type="submit" id="subm" name="subm">
+	</form>
+	<script>
+		function check(input) {
+   			if (input.value <= 0) {
+     			input.setCustomValidity('The amount must be greater than 0');
+   			} else {
+     			input.setCustomValidity('');
+   			}
+ 		}
+
+	</script>
+
+
+
+
+</body>
+
+
+</html> 
