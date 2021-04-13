@@ -2,7 +2,7 @@
 body {
   margin: 0px; 
   height: 1040px; 
-  background: rgb(255,255,255);
+  background: #19647E;
   font-family: 'Happy Monkey', sans-serif;
 }
 
@@ -12,6 +12,7 @@ body {
   margin: 0px;
   right: 150px;
   top: 60px;
+  color: #FDF7FA;
 }
 
 #title {
@@ -20,18 +21,18 @@ body {
   left: 50px;
   top: 40px;
   font-size: 70px;
-  color: black;
+  color: #E76F51;
 }
 
 #name {
   font-size: 24px;
-  color: black;
+  color: #E76F51;
 }
 
 #userName {
   position: absolute;
   font-size: 20px;
-  color: black;
+  color: #FDF7FA;
   top: 56px;
   left: -100px;
   white-space: nowrap;
@@ -39,12 +40,14 @@ body {
 
 #myProjects{
   position: absolute;
+  color: #FDF7FA;
   top: 140px;
   left: 50px;
 }
 
 #myContributions{
   position: absolute;
+  color: #FDF7FA;
   top: 670px;
   left: 50px;
 }
@@ -87,7 +90,6 @@ body {
 }
 
 .title {
-  color: black;
   font-weight: 300;
   position: absolute;
   left: 20px;

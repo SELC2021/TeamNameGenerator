@@ -1,8 +1,9 @@
 body {
 	margin: 0px; 
 	height: 1040px; 
-	background: rgb(255,255,255);
+	/*background: rgb(255,255,255);*/
 	font-family: 'Trebuchet MS', sans-serif;
+  background-color: rgb(10, 255, 10);
 }
 
 
@@ -12,7 +13,7 @@ body {
 	left: 50px;
 	top: 40px;
 	font-size: 70px;
-	color: black;
+	color: #E76F51;
   font-family: 'Happy Monkey'
 }
 
@@ -82,7 +83,7 @@ body {
 }
 
 .title {
-  color: black;
+  color: #FDF7FA;
   font-weight: 300;
   position: absolute;
   left: 20px;
