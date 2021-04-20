@@ -1,11 +1,10 @@
 body {
-  margin: 0px; 
-  height: 1040px; 
   background: rgb(255,255,255);
   font-family: 'Happy Monkey', sans-serif;
   padding-left: 20px;
   color: #FDF7FA;
   background-color: #19647E;
+  overflow: hidden;
 }
 
 #myText {
@@ -37,4 +36,55 @@ body {
 }
 
 
+#Welcome {
+	position: relative;
+	left: 40%;
+
+}#Welcome1 {
+	position: relative;
+	left: 40%;
+
+}
+
+
+
+.star-five {
+  margin: 50px 0;
+  position: relative;
+  display: block;
+  color:  rgb(126,162,170);
+  width: 0px;
+  height: 0px;
+  border-right: 100px solid transparent;
+  border-bottom: 70px solid  rgb(126,162,170);
+  border-left: 100px solid transparent;
+  transform: rotate(35deg);
+}
+.star-five:before {
+  border-bottom: 80px solid  rgb(126,162,170);
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -45px;
+  left: -65px;
+  display: block;
+  content: '';
+  transform: rotate(-35deg);
+}
+.star-five:after {
+  position: absolute;
+  display: block;
+  color:  rgb(126,162,170);
+  top: 3px;
+  left: -105px;
+  width: 0px;
+  height: 0px;
+  border-right: 100px solid transparent;
+  border-bottom: 70px solid  rgb(126,162,170);
+  border-left: 100px solid transparent;
+  transform: rotate(-70deg);
+  content: '';
+}
 
