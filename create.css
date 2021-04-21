@@ -1,0 +1,41 @@
+body {
+	background-image: url(kazookid.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: Garamond, serif;
+	margin-left: 450px;
+}
+h1 {
+	position: absolute;
+}
+.choosefile {
+	position: absolute;
+	margin-top: 100px;
+}
+.title {
+	position: absolute;
+	margin-top: 150px;
+}
+.textboxes {
+	border-radius: 5px;
+	border-color: grey;
+}
+.description {
+	position: fixed;
+	margin-top: 200px;
+}
+.videodesc {
+	vertical-align: top;
+}
+
+.cont {
+	position: absolute;
+	margin-top: 400px;
+}
+
+.button {
+	position: absolute;
+	margin-top: 450px;
+	background-color: blue;
+	color: white;
+}
