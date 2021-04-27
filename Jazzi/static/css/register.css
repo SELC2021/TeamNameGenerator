@@ -1,0 +1,47 @@
+#myText {
+  font-size: 26px;
+}
+
+.myClass {
+  color: green;
+  background: purple;
+}
+
+.VideoBLock{
+  position: relative;
+  
+  border-radius: 1px;
+  border-color: grey;
+  border-style: solid;
+  border-width: 3px;
+  width: 400px;
+  height: 100px;
+}
+.NameBlock{
+  position: relative;
+  
+  border-radius: 1px;
+  border-color: grey;
+  border-style: solid;
+  border-width: 3px;
+  width: 400px;
+  height: 66px;
+}
+
+.PaymentInfoBlock{
+  position: relative;
+  
+  border-radius: 1px;
+  border-color: grey;
+  border-style: solid;
+  border-width: 3px;
+  width: 400px;
+  height: 140px;
+}
+
+.ProfilePic{
+    height: 65px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;

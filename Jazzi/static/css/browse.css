@@ -1,59 +1,61 @@
 body {
-	margin: 0px; 
-	height: 1040px; 
-	background: rgb(255,255,255);
-	font-family: 'Trebuchet MS', sans-serif;
+  margin: 0px; 
+  height: 1040px; 
+  /*background: rgb(255,255,255);*/
+  font-family: 'Trebuchet MS', sans-serif;
+  background-color: rgb(10, 255, 10);
 }
 
 
 #title {
-	position: absolute;
-	margin: 0px;
-	left: 50px;
-	top: 40px;
-	font-size: 70px;
-	color: black;
+  position: absolute;
+  margin: 0px;
+  left: 50px;
+  top: 40px;
+  font-size: 70px;
+  color: #E76F51;
+  font-family: 'Happy Monkey'
 }
 
 #accountInfo {
-	text-align: right;
-	position: absolute;
-	margin: 0px;
-	right: 150px;
-	top: 60px;
+  text-align: right;
+  position: absolute;
+  margin: 0px;
+  right: 150px;
+  top: 60px;
 }
 
 #name {
-	font-size: 24px;
-	color: black;
+  font-size: 24px;
+  color: black;
 }
 
 #credits {
-	position: relative;
-	font-size: 13px;
-	color: black;
-	top: 5px;
+  position: relative;
+  font-size: 13px;
+  color: black;
+  top: 5px;
 }
 
 #profilePic {
-	position: absolute;
-	margin: 0px;
-	right: 50px;
-	top: 50px;
-	width: 80px;
-	height: 80px;
+  position: absolute;
+  margin: 0px;
+  right: 50px;
+  top: 50px;
+  width: 80px;
+  height: 80px;
 }
 
-.container {
+.movieRow {
   position: absolute;
   height: 400px;
-  width: 80%;
+  width: 90%;
   display: flex;
   left: 10%;
   top: 200px;
 }
 
-.card {
+.movieCard {
   display: flex;
   height: 400px;
   width: 300px;
@@ -65,25 +67,56 @@ body {
   left: 0px;
 }
 
-.card:not(:first-child) {
+.movieCard:not(:first-child) {
     margin-left: -20px;
 }
 
-.card:hover {
+.movieCard:hover {
   transform: translateY(-20px);
   transition: 0.4s ease-out;
 }
 
-.card:hover ~ .card {
+.movieCard:hover ~ .movieCard {
   position: relative;
   left: 50px;
   transition: 0.4s ease-out;
 }
 
 .title {
-  color: black;
+  color: #FDF7FA;
   font-weight: 300;
   position: absolute;
   left: 20px;
-  top: 15px;
+  top: 0px;
+}
+
+.bar {
+  position: absolute;
+  bottom: -25px;
+  left: 0px;
+  height: 25px;
+  width: 100%;
+}
+
+.emptybar {
+  background-color: rgba(0,154,217,0);
+  width: 100%;
+  height: 100%;
+}
+
+.filledbar {
+  position: absolute;
+  top: 0px;
+  z-index: 3;
+  width: 0px;
+  height: 100%;
+  background: rgb(0,154,217);
+  background: linear-gradient(90deg, rgba(62,124,177,1) 0%, rgba(5,74,145,1) 100%);
+  transition: 0.6s ease-out;
+  border-radius: 10px;
+}
+
+.movieCard:hover .filledbar {
+  width: 120px;
+  transition: 0.4s ease-out;
 }

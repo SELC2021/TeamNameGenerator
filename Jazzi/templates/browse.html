@@ -3,69 +3,121 @@
 
 <head>
     <title>Browse</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/browse.css') }}">
+    <script src="./browse.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Happy Monkey' rel='stylesheet'>
 </head>
 
 <body>
+    <!-- Navbar -->
     <table id="accountInfo">
-        <p id="title">Jazzi</p>
+        <a href="/browse"><p id="title">Jazzi</p></a>
         <tr>
             <th id="name">{{ firstName }} {{ lastName }}</th>
         </tr>
         <tr>
-            <th id="credits">CREDITS: {{ numCredits }}</th>
+            <a href="/shop"><th id="credits">CREDITS: {{ numCredits }}</th></a>
         </tr>
-        <img id="profilePic" src="./assets/profilePic.png">
+        <a href="/profile"><img id="profilePic" src="{{url_for('static', filename='img/profilePic.png')}}"></a>
+        <button onclick="location.href='/login';">Logout</button>
     </table>
-    <div class="container"  style="top: 200px;">
-        <div class="card" style="background-image: url(./assets/defaultProject1.png);">
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog" style="width:70%;">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Monke GO CrAy crAY</h4>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600px" src="https://www.youtube.com/embed/8zjck7iINXY"></iframe>
+                </div>
+                <div class="modal-footer">
+                    <p>This is some random text I am writing now becuase the demo is currently going on. But it is actually meant to represent the movie discrirption.</p>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Contribute</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Movie movieCards -->
+    <div class="movieRow" style="top: 200px;" data-toggle="modal" data-target="#myModal">
+        <div class="movieCard" style="background-image: url('{{url_for('static', filename='img/defaultProject1.png')}}');">
             <h3 class="title">Megamind</h3>
+            <div class="bar">
+                <div class="emptybar"></div>
+                <div class="filledbar"></div>
+            </div>
         </div>
-        <div class="card" style="background-image: url(./assets/defaultContribution3.png);">
+        <div class="movieCard" style="background-image: url('{{url_for('static', filename='img/defaultContribution3.png')}}');">
             <h3 class="title">Shrek</h3>
+            <div class="bar">
+                <div class="emptybar"></div>
+                <div class="filledbar"></div>
+            </div>
         </div>
-        <div class="card" style="background-image: url(./assets/defaultProject2.png);">
+        <div class="movieCard" style="background-image: url('{{url_for('static', filename='img/defaultProject2.png')}}');">
             <h3 class="title">Kung Fu Panda</h3>
+            <div class="bar">
+                <div class="emptybar"></div>
+                <div class="filledbar"></div>
+            </div>
         </div>
-        <div class="card" style="background-image: url(./assets/policeMan.png);">
+        <div class="movieCard" style="background-image: url('{{url_for('static', filename='img/policeMan.png')}}');">
             <h3 class="title">Lemonade Mouth</h3>
+            <div class="bar">
+                <div class="emptybar"></div>
+                <div class="filledbar"></div>
+            </div>
         </div>
-        <div class="card" style="background-image: url(./assets/defaultProject3.png);">
+        <div class="movieCard" style="background-image: url('{{url_for('static', filename='img/defaultProject3.png')}}');">
             <h3 class="title">The Incredibles</h3>
+            <div class="bar">
+                <div class="emptybar"></div>
+                <div class="filledbar"></div>
+            </div>
         </div>
     </div>
-    <div class="container" style="top: 630px;">
-        <div class="card" style="background-image: url(./assets/defaultProject1.png);">
+    <div class="movieRow" style="top: 650px;" data-toggle="modal" data-target="#myModal">
+        <div class="movieCard" style="background-image: url('{{url_for('static', filename='img/defaultProject1.png')}}');">
             <h3 class="title">Flushed Away</h3>
+            <div class="bar">
+                <div class="emptybar"></div>
+                <div class="filledbar"></div>
+            </div>
         </div>
-        <div class="card" style="background-image: url(./assets/defaultContribution3.png);">
+        <div class="movieCard" style="background-image: url('{{url_for('static', filename='img/defaultContribution3.png')}}');">
             <h3 class="title">Beauty and The Beast</h3>
+            <div class="bar">
+                <div class="emptybar"></div>
+                <div class="filledbar"></div>
+            </div>
         </div>
-        <div class="card" style="background-image: url(./assets/defaultProject2.png);">
+        <div class="movieCard" style="background-image: url('{{url_for('static', filename='img/defaultProject2.png')}}');">
             <h3 class="title">Up</h3>
+            <div class="bar">
+                <div class="emptybar"></div>
+                <div class="filledbar"></div>
+            </div>
         </div>
-        <div class="card" style="background-image: url(./assets/policeMan.png);">
+        <div class="movieCard" style="background-image: url('{{url_for('static', filename='img/policeMan.png')}}');">
             <h3 class="title">The Matrix</h3>
+            <div class="bar">
+                <div class="emptybar"></div>
+                <div class="filledbar"></div>
+            </div>
         </div>
-        <div class="card" style="background-image: url(./assets/defaultProject3.png);">
+        <div class="movieCard" style="background-image: url('{{url_for('static', filename='img/defaultProject3.png')}}');">
             <h3 class="title">Title</h3>
-        </div>
-    </div>
-    <div class="container" style="top: 1060px;">
-        <div class="card" style="background-image: url(./assets/defaultProject1.png);">
-            <h3 class="title">Back To The Future</h3>
-        </div>
-        <div class="card" style="background-image: url(./assets/defaultContribution3.png);">
-            <h3 class="title">School of Rock</h3>
-        </div>
-        <div class="card" style="background-image: url(./assets/defaultProject2.png);">
-            <h3 class="title">Sponge Bobe The Movie</h3>
-        </div>
-        <div class="card" style="background-image: url(./assets/policeMan.png);">
-            <h3 class="title">Tenant</h3>
-        </div>
-        <div class="card" style="background-image: url(./assets/defaultProject3.png);">
-            <h3 class="title">Ghost Busters</h3>
+            <div class="bar">
+                <div class="emptybar"></div>
+                <div class="filledbar"></div>
+            </div>
         </div>
     </div>
 </body>

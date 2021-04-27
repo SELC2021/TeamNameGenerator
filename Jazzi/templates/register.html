@@ -1,57 +1,62 @@
 <!DOCTYPE html>
+<link href='https://fonts.googleapis.com/css?family=Happy Monkey' rel='stylesheet'>
+
 <html>
 
 <head>
-<title>Jazzi</title>
-<link rel="stylesheet" href="button.css">
+<title>Register</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}">
 </head>
 
 <body>
 
-<h1>Welcome to Jazzi!!!</h1>
-<h2>register now!</h2>
+<h1 id="Welcome1">Welcome to Jazzi!!!</h1>
+<h2 id="Welcome">New to Jazzi? Register now!</h2>
 
-<button onclick="location.href='./login';">already have an account? log in!</button>
+<button id="LoginButton" onclick="location.href='./login';">already have an account? log in!</button>
 
 
-<form action="/action_page.php">
-	<div class="NameBlock">
-    <label for="fname">First Name:</label>
-  <input type="text" id="fname" name="uname"><br><br>
-    <label for="fname">Last name:</label>
-  <input type="text" id="fname" name="uname"><br><br>	
-  <div>
-  	<div class="VideoBLock">
-  <label for="fname">Username:</label>
-  <input type="text" id="fname" name="uname"><br><br>
-  <label for="pass">Passowrd:</label>
-  <input type="text" id="pass" name="pass"><br><br>
-  <label for="pass">Confirm Password:</label>
-  <input type="text" id="pass" name="pass"><br><br>
-  <div>
+<form action="{{ url_for('register') }}" method="post">
+  <div class="RegisterBlock">
+    <input id="firstname" name="firstname" type="text" placeholder="First Name" class="textbox"/></br></br> 
+                    <input id="lastname" name="lastname" type="text" placeholder="Last Name" class="textbox"/></br></br>
+                    <input id="email" name="email" type="email" placeholder="Email" class="textbox"/></br></br>  
+                    <input id="username" name="username" type="text" placeholder="Username" class="textbox"/></br></br> 
+                    <input id="password" name="password" type="password" placeholder="Password" class="textbox"/></br></br> 
+                    <input id="confirm_password" name="confirm_password" type="password" placeholder="Confirm Password" class="textbox"/></br></br> 
+                    <h4> Payment Information: </h4>
+                    <h4>Jazzi will charge $x/month to this card.</h4>
+                    <input id="ccnumber" name="ccnumber" type="text" placeholder="Credit Card Number" class="textbox"/></br></br>  
+                    <input id="expdate" name="expdate" type="text" placeholder="Expiration Date" class="textbox"/></br></br> 
+                    <input id="cvv" name="cvv" type="text" placeholder="CVV" class="textbox"/></br></br> 
+                    <input id="zipcode" name="zipcode" type="text" placeholder="Zip Code" class="textbox"/></br></br> 
+                    <input type="submit" class="btn" value="Sign Up"></br>
 
-  	<h2> payment information: </h2>
-  	<p>Jazzi will charge $x/month to this card.</p>
-
-  	<div class="PaymentInfoBlock">
-  <label for="fname">credit card number:</label>
-  <input type="text" id="fname" name="uname"><br><br>
-  <label for="pass">expiration (mm/dd):</label>
-  <input type="text" id="pass" name="pass"><br><br>
-  <label for="pass">security code:</label>
-  <input type="text" id="pass" name="pass"><br><br>	
-  <label for="pass">zip code:</label>
-  <input type="text" id="pass" name="pass"><br><br> 
-  <div>
- 
- 
 </form>
 
+<!--
+<div class="star-five" style="left: 50%; top: -250px; z-index: -1"></div>
+-->
 
 
-<button type="button">Register!</button>
+<div class="star-five" style="left: 25px; top:-600px; z-index: -1"></div>
+<div class="star-five" style="left:200px; top:-500px; z-index: -1"></div>
+<div class="star-five" style="left:375px; top:-400px; z-index: -1"></div>
+<div class="star-five" style="left:550px; top:-300px; z-index: -1"></div>
+<div class="star-five" style="left: 25px; top:-625px; z-index: -1"></div>
+<div class="star-five" style="left:200px; top:-500px; z-index: -1"></div>
+<div class="star-five" style="left:500px; top:-1300px; z-index: -1"></div>
+<div class="star-five" style="left:700px; top:-1150px; z-index: -1"></div>
+<div class="star-five" style="left:1000px; top:-1150px; z-index: -1"></div>
+<div class="star-five" style="left:1500px; top:-900px; z-index: -1"></div>
+<div class="star-five" style="left:1600px; top:-1300px; z-index: -1"></div>
+<div class="star-five" style="left:1000px; top:-1800px; z-index: -1"></div>
+<div class="star-five" style="left:1200px; top:-1500px; z-index: -1"></div>
 
 
 </body>
+
+
+
 
 </html>

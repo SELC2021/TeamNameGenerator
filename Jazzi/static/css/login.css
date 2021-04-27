@@ -1,23 +1,37 @@
 .heading {
 	/* padding-left: 50%; */
+	position: relative;
 	font-size: 35px;
+	margin-left: 40%;
+	margin-top: 5%;
+	color: #FDF7FA;
+}
+body {
+	background-color: #19647E;
 }
 .button {
-	position: fixed;
-	left: 50%;
+	position: relative;
+	background-color: #E76F51;
+	color: #19647E;
 }
 .inputbox {
-	position: fixed;
+	position: relative;
 
 }
 
 .BackBlock {
 	position: relative;
+	margin-left: 40%;
 	/* background: purple; */
 	border-style: solid;
 	border-width: 3px;
-	border-color: red;
+	border-color: #E76F51;
 	border-radius: 5px;
 	width: 250px;
 	height: 100px;
+	color: #FDF7FA;
+}
+p {
+	position: relative;
+	margin-left: 40%;
 }

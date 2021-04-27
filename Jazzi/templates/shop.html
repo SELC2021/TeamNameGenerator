@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title> Shop </title>
-	<link rel="stylesheet" href="shop.css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/shop.css') }}">
 	<script>
 		function check1(input) {
    			if (input.value <= 0) {
@@ -18,7 +18,7 @@
 	</script>
 </head>
 <body>
-	<form action="action">
+	<form action="{{ url_for('shop') }}" method="post">
 	<h1>Token Shop</h1>
   <div class="formboxes">
 	<div class="ccnumbox">

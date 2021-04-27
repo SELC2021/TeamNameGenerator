@@ -2,12 +2,12 @@
 <html>
 <head>
 	<title>Create</title>
-	<link rel="stylesheet" href="create.css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/create.css') }}">
 </head>
 
 <body>
 	<h1>Put the link to your youtube video here:</h1>
-	<form action="/action_page.php">
+	<form action="{{ url_for('create') }}" method="post">
 		<div class="choosefile">
   		<input type="text" id="link" name="link">
   		<input type="submit">

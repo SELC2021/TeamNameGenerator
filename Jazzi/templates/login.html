@@ -4,7 +4,6 @@
 	<title>login</title>
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
 </head>
-</head>
 
 <body>
 	<p class="heading">Login</p>
@@ -12,7 +11,7 @@
 	<p class = "MyClass" id="myText"> password: </p>
 	<svg width ="500" height="50">
 	<rect width="350" height="100" style="fill:rgb(40,100,100);stroke-width:3;stroke:rgb(0,0,0)" /> -->
-	<form action="{{ browse }}" method="post">
+	<form action="{{ url_for('login') }}" method="post">
 		<div class="BackBlock">
   		<label class="inputtext" for="fname">Username: </label>
   		<input class="inputbox" type="text" id="login_username" name="login_username"><br><br>
@@ -21,5 +20,6 @@
   		<input class="inputbox" type="submit" value="Login">
   	    </div>
 	</form>
+	<p><a href="/register">Not a member? Register here!</a></p>
 
 </html>

@@ -4,38 +4,40 @@
 
 
 <head>
-	<link rel="stylesheet" href="profile.css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}">
 	<title>Profile</title>
 <head/>
 
 
 <body>
 	<table id="accountInfo">
-		<p id="title">Jazzi</p>
+        <a href="/browse"><p id="title">Jazzi</p></a>
 		<tr>
-			<th id="name">John Doe</th>
+			<th id="name">{{ firstName }} {{ lastName }}</th>
 		</tr>
 		<tr>
-		    <th id="credits">CREDITS: 5250</th>
+		    <th id="credits">CREDITS: {{ numCredits }}</th>
         </tr>
         <tr>
-        	<th id="userName">username: johndoe44</th>
+        	<th id="userName">Username: {{ userName }}</th>
         </tr>
-        <img id="profilePic" src="./assets/defaultProfilePicture2.png">
+        
+        <a href="/profile"><img id="profilePic" src="{{url_for('static', filename='img/profilePic.png')}}"></a>
+        <button onclick="location.href='/shop';">Top Up</button>
 
     </table>
 
-    <h2 id="myProjects">My Projects</h2>
+    <a href="/create"><h2 id="myProjects">My Projects</h2></a>
 
 
 	<div class="container"  style="top: 220px;">
-        <div class="card" style="background-image: url(./assets/defaultProject1.png);">
+        <div class="card" style="background-image: url('{{url_for('static', filename='img/defaultContribution3.png')}}');">
             <h3 class="title">Megamind</h3>
         </div>
-        <div class="card" style="background-image: url(./assets/defaultContribution3.png);">
+        <div class="card" style="background-image: url('{{url_for('static', filename='img/defaultContribution3.png')}}');">
             <h3 class="title">Shrek</h3>
         </div>
-        <div class="card" style="background-image: url(./assets/defaultProject2.png);">
+        <div class="card" style="background-image: url('{{url_for('static', filename='img/defaultProject2.png')}}');">
             <h3 class="title">Kung Fu Panda</h3>
     </div>
 </div>
@@ -44,36 +46,36 @@
 
 
 	<div class="container" style="top: 750px;">
-        <div class="card" style="background-image: url(./assets/defaultProject1.png);">
+        <div class="card" style="background-image: url('{{url_for('static', filename='img/defaultProject4.png')}}');"">
             <h3 class="title">Flushed Away</h3>
         </div>
-        <div class="card" style="background-image: url(./assets/defaultContribution3.png);">
+        <div class="card" style="background-image: url('{{url_for('static', filename='img/defaultContribution3.png')}}');">
             <h3 class="title">Beauty and The Beast</h3>
         </div>
-        <div class="card" style="background-image: url(./assets/defaultProject2.png);">
+        <div class="card" style="background-image: url('{{url_for('static', filename='img/defaultProject2.png')}}');">
             <h3 class="title">Up</h3>
         </div>
-        <div class="card" style="background-image: url(./assets/policeMan.png);">
+        <div class="card" style="background-image: url('{{url_for('static', filename='img/policeMan.png')}}');">
             <h3 class="title">The Matrix</h3>
         </div>
-        <div class="card" style="background-image: url(./assets/defaultProject3.png);">
+        <div class="card" style="background-image: url('{{url_for('static', filename='img/defaultProject3.png')}}');">
             <h3 class="title">Title</h3>
         </div>
     </div>
     <div class="container" style="top: 1200px;">
-        <div class="card" style="background-image: url(./assets/defaultProject1.png);">
+        <div class="card" style="background-image: url('{{url_for('static', filename='img/defaultProject1.png')}}');">
             <h3 class="title">Back To The Future</h3>
         </div>
-        <div class="card" style="background-image: url(./assets/defaultContribution3.png);">
+        <div class="card" style="background-image: url('{{url_for('static', filename='img/defaultContribution3.png')}}');">
             <h3 class="title">School of Rock</h3>
         </div>
-        <div class="card" style="background-image: url(./assets/defaultProject2.png);">
+        <div class="card" style="background-image: url('{{url_for('static', filename='img/defaultProject2.png')}}');">
             <h3 class="title">Sponge Bob The Movie</h3>
         </div>
-        <div class="card" style="background-image: url(./assets/policeMan.png);">
+        <div class="card" style="background-image: url('{{url_for('static', filename='img/policeMan.png')}}');">
             <h3 class="title">Tenant</h3>
         </div>
-        <div class="card" style="background-image: url(./assets/defaultProject3.png);">
+        <div class="card" style="background-image: url('{{url_for('static', filename='img/defaultProject3.png')}}');">
             <h3 class="title">Ghost Busters</h3>
         </div>
     </div>
@@ -81,10 +83,10 @@
     </div>
     <div class="container" style="top: 1650px;">
         
-        <div class="card" style="background-image: url(./assets/policeMan.png);">
+        <div class="card" style="background-image: url('{{url_for('static', filename='img/policeMan.png')}}');">
             <h3 class="title">Lemonade Mouth</h3>
         </div>
-        <div class="card" style="background-image: url(./assets/defaultProject3.png);">
+        <div class="card" style="background-image: url('{{url_for('static', filename='img/defaultProject3.png')}}');">
             <h3 class="title">The Lorax</h3>
         </div>
     </div>
